@@ -9,7 +9,7 @@ const AddChannel = ({ mutate }) => {
       evt.persist();
       mutate({ 
         variables: { name: evt.target.value },
-        refetchQueries: [ { query: channelsListQuery }],
+        refetchQueries: [ { query: channelsListQuery }], //re-render
       })
       .then( res => {
         evt.target.value = '';  
