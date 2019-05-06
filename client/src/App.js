@@ -9,7 +9,7 @@ import {
 } from 'react-apollo';
 
 
-const networkInterface = createNetworkInterface({ uri: 'http://localhost:4000/graphql' });
+const networkInterface = createNetworkInterface({ uri: 'http://localhost:5000/graphql' });
 networkInterface.use([{
   applyMiddleware(req, next) {
     setTimeout(next, 500);
